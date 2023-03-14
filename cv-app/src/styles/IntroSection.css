@@ -1,0 +1,43 @@
+#intro-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#intro-image-container {
+    display: grid;
+    align-content: center;
+    width: 190px;
+}
+
+#intro-info {
+    display: flex;
+    flex-direction: column;
+}
+
+#intro-image {
+    aspect-ratio: 1/1;
+    width: 130px;
+    border-radius: 200px;
+}
+
+#intro-name {
+    font-size: 2.25rem;
+    font-weight: bold;
+}
+
+#intro-job-role {
+    font-size: 1.75rem;
+}
+
+.intro-contact {
+    font-size: 1.25rem;
+}
+
+/* #intro-contact-info {
+    display: flex;
+    flex-direction: row;
+    width: 390px;
+    justify-content: space-between;
+} */
