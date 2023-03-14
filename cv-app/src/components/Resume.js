@@ -3,6 +3,7 @@ import IntroSection from './IntroSection';
 import ProfileSection from './ProfileSummary';
 import EducationSection from './EducationalExperience';
 import WorkExperienceSection from './ProfessionalWorkExperience';
+import '../styles/Resume.css';
 
 
 class Resume extends Component {
@@ -12,7 +13,7 @@ class Resume extends Component {
 
     render() {
         return (
-            <div>
+            <div id='resume'>
                 <IntroSection />
                 <ProfileSection />
                 <EducationSection />
