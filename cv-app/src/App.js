@@ -1,12 +1,12 @@
 import './styles/App.css';
 import Resume from './components/Resume';
+import ResumeForm from './components/ResumeForm';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="app">
+        <ResumeForm />
         <Resume />
-      </header>
     </div>
   );
 }
