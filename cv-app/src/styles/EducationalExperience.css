@@ -1,0 +1,56 @@
+#education-container {
+    --font-size-big: 1.15rem;
+    --font-size-medium: 1rem;
+    --font-size-small: 0.9rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.education {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.education-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.education-name {
+    font-size: var(--font-size-big);
+    font-weight: bold;
+}
+
+.education-duration {
+    font-size: var(--font-size-small);
+}
+
+.education-institution {
+    font-size: var(--font-size-small);
+}
+
+.education-summary {
+    font-size: var(--font-size-small);
+}
+
+.bullet-point-container {
+    height: 90%;
+    width: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+}
+
+.bullet-point {
+    background-color: black;
+    height: 10px;
+    width: 10px;
+    border-radius: 100px;
+}
