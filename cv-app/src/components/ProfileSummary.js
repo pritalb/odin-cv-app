@@ -7,7 +7,7 @@ class ProfileSection extends Component {
 
     render() {
         return (
-            <div>
+            <div className='resume-info-section'>
                 <div className='section-heading'> Profile </div>
                 <div id='profile-summary'> 
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. 

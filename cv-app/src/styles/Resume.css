@@ -8,3 +8,21 @@
     border-style: solid;
     padding: 20px;
 }
+
+#resume-info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.resume-info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.section-heading {
+    background-color: red;
+    color: white;
+    padding: 3px;
+}

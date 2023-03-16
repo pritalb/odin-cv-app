@@ -24,7 +24,7 @@ class EducationSection extends Component {
 
     render() {
         return (
-            <div>
+            <div className='resume-info-section'>
                 <div className='section-heading'> Education </div>
                 <div>
                     <Education />

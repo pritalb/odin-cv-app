@@ -15,9 +15,11 @@ class Resume extends Component {
         return (
             <div id='resume'>
                 <IntroSection />
-                <ProfileSection />
-                <EducationSection />
-                <WorkExperienceSection />
+                <div id='resume-info'>
+                    <ProfileSection />
+                    <EducationSection />
+                    <WorkExperienceSection />
+                </div>
             </div>
         );
     }
