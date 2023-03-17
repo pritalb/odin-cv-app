@@ -46,8 +46,8 @@ class IntroForm extends Component {
 }
 
 class IntroInfo extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
     }
 
     render() {
@@ -68,19 +68,34 @@ class IntroInfo extends Component {
 }
 
 class IntroSection extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
+
+        this.ShowEditForm = this.ShowEditForm.bind(this);
+        this.HideEditForm = this.HideEditForm.bind(this);
+
+        this.state = {
+            shouldFormBeShown: false,
+        };
     }
 
     ShowEditForm() {
-        
+        this.setState({
+            shouldFormBeShown: true,
+        })
+    }
+
+    HideEditForm() {
+        this.setState({
+            shouldFormBeShown: false,
+        })
     }
 
     render() {
         return (
-            <div>
+            <div onMouseEnter={this.ShowEditForm} onMouseLeave={this.HideEditForm}>
                 <IntroInfo />
-                {false && <IntroForm />}
+                {this.state.shouldFormBeShown && <IntroForm />}
             </div>
         );
     }
