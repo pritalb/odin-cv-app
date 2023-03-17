@@ -34,11 +34,6 @@ class IntroForm extends Component {
                     <label htmlFor='email-info'> Enter your Email: </label>
                     <input type="email" name='email-info' value={this.props.email} onChange={(e) => {this.props.SetEmail(e)}} />
                 </div>
-
-                <div>
-                    <label htmlFor='profile-summary'> Enter your Profile Summary: </label>
-                    <textarea name='profile-summary'></textarea>
-                </div>
             </div>
         );
     }
