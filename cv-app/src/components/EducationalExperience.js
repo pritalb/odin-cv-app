@@ -1,5 +1,4 @@
-import React, { Component, useRef }  from 'react';
-import { unmountComponentAtNode, getDOMNode } from 'react-dom';
+import React, { Component, }  from 'react';
 import '../styles/EducationalExperience.css';
 
 class EditEducationForm extends Component {
@@ -162,6 +161,10 @@ class Education extends Component {
 class EducationSection extends Component {
     constructor() {
         super();
+
+        this.state = {
+            educations: [<Education />, <Education />, <Education />,],
+        }
     }
 
     render() {
@@ -169,9 +172,7 @@ class EducationSection extends Component {
             <div className='resume-info-section'>
                 <div className='section-heading'> Education </div>
                 <div id='education-container'>
-                    <Education uniqueID="education-1"/>
-                    <Education />
-                    <Education />
+                    { this.state.educations }
                 </div>
             </div>
         );
