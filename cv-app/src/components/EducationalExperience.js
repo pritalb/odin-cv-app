@@ -40,8 +40,8 @@ class EditEducationForm extends Component {
 }
 
 class Education extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.ShowForm = this.ShowForm.bind(this);
         this.HideForm = this.HideForm.bind(this);
@@ -54,11 +54,11 @@ class Education extends Component {
 
         this.state = {
             showEditForm: false,
-            course: 'Degree Education',
-            institution: 'Some College',
-            startDate: '2011',
-            endDate: '2014',
-            summary: 'This is a sample education information. Take it with a grain of salt',
+            course: this.props.course,
+            institution: this.props.institution,
+            startDate: this.props.startDate,
+            endDate: this.props.endDate,
+            summary: this.props.summary,
             renderSelf: true,
         }
     }
@@ -159,11 +159,33 @@ class Education extends Component {
 }
 
 class EducationSection extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
-            educations: [<Education />, <Education />, <Education />,],
+            currentUniqueKey: 3,
+            educations: [
+                            <Education  key="education-0"
+                                        course='Degree Education 1'
+                                        institution='Some College 1'
+                                        startDate='2011'
+                                        endDate='2014'
+                                        summary='This is a sample education information. Take it with a grain of salt'/>,
+
+                            <Education  key="education-1"
+                                        course='Degree Education 2'
+                                        institution='Some College 2'
+                                        startDate='2014'
+                                        endDate='2015'
+                                        summary='This is a sample education information. Take it with a grain of salt' />,
+
+                            <Education  key="education-2" 
+                                        course='Degree Education 3'
+                                        institution='Some College 3'
+                                        startDate='2015'
+                                        endDate='2017'
+                                        summary='This is a sample education information. Take it with a grain of salt'/>,
+                        ],
         }
     }
 
