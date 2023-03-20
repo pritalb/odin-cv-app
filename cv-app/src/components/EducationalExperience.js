@@ -161,32 +161,6 @@ class Education extends Component {
 class EducationSection extends Component {
     constructor(props) {
         super(props);
-
-        this.state = {
-            currentUniqueKey: 3,
-            educations: [
-                            <Education  key="education-0"
-                                        course='Degree Education 1'
-                                        institution='Some College 1'
-                                        startDate='2011'
-                                        endDate='2014'
-                                        summary='This is a sample education information. Take it with a grain of salt'/>,
-
-                            <Education  key="education-1"
-                                        course='Degree Education 2'
-                                        institution='Some College 2'
-                                        startDate='2014'
-                                        endDate='2015'
-                                        summary='This is a sample education information. Take it with a grain of salt' />,
-
-                            <Education  key="education-2" 
-                                        course='Degree Education 3'
-                                        institution='Some College 3'
-                                        startDate='2015'
-                                        endDate='2017'
-                                        summary='This is a sample education information. Take it with a grain of salt'/>,
-                        ],
-        }
     }
 
     render() {
@@ -194,11 +168,11 @@ class EducationSection extends Component {
             <div className='resume-info-section'>
                 <div className='section-heading'> Education </div>
                 <div id='education-container'>
-                    { this.state.educations }
+                    { this.props.educations }
                 </div>
             </div>
         );
     }
 }
 
-export default EducationSection;
+export { EducationSection, Education };
