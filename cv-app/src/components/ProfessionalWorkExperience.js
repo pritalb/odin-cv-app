@@ -55,11 +55,11 @@ class WorkExperience extends Component {
         this.state = {
             showEditForm: false,
             renderSelf: true,
-            jobrole: "Some Sample Engineer",
-            company: "Sample Company inc.",
-            startDate: "2014",
-            endDate: "2018",
-            summary: "This is a sample work information. Take it with a grain of salt",
+            jobrole: this.props.jobrole,
+            company: this.props.company,
+            startDate: this.props.startDate,
+            endDate: this.props.endDate,
+            summary: this.props.summary,
         };
     }
 
@@ -155,8 +155,8 @@ class WorkExperience extends Component {
 }
 
 class WorkExperienceSection extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
     }
 
     render() {
@@ -164,12 +164,13 @@ class WorkExperienceSection extends Component {
             <div className='resume-info-section'>
                 <div className="section-heading"> Work Experience </div>
                 <div id="work-experience-container">
-                    <WorkExperience />
-                    <WorkExperience />
+                    {
+                        this.props.works
+                    }
                 </div>
             </div>
         );
     }
 }
 
-export default WorkExperienceSection;
+export { WorkExperienceSection, WorkExperience };

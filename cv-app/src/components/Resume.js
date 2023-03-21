@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import IntroSection from './IntroSection';
 import ProfileSection from './ProfileSummary';
 import { EducationSection, Education } from './EducationalExperience';
-import WorkExperienceSection from './ProfessionalWorkExperience';
+import { WorkExperienceSection, WorkExperience } from './ProfessionalWorkExperience';
 import ExperienceForm from './ExperienceForm';
 import '../styles/Resume.css';
 
@@ -37,6 +37,20 @@ class Resume extends Component {
                                         endDate='2017'
                                         summary='This is a sample education information. Take it with a grain of salt'/>,
                         ],
+            works: [
+                <WorkExperience key="education-3"
+                                jobrole='Sample Engineer 1'
+                                company='Some Company inc.'
+                                startDate='2014'
+                                endDate='2015'
+                                summary='This is a sample work information. Take it with a grain of salt' />,
+                <WorkExperience key="education-4"
+                                jobrole='Sample Engineer 2'
+                                company='Some Company inc.'
+                                startDate='2014'
+                                endDate='2015'
+                                summary='This is a sample work information. Take it with a grain of salt' />,
+            ],
         }
     }
 
@@ -67,7 +81,7 @@ class Resume extends Component {
                     <div id='resume-info'>
                         <ProfileSection />
                         <EducationSection educations={this.state.educations}/>
-                        <WorkExperienceSection />
+                        <WorkExperienceSection works={this.state.works}/>
                     </div>
                 </div>
             </div>
