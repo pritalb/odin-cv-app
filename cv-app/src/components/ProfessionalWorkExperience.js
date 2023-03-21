@@ -46,10 +46,20 @@ class WorkExperience extends Component {
         this.DeleteSelf = this.DeleteSelf.bind(this);
         this.ShowForm = this.ShowForm.bind(this);
         this.HideForm = this.HideForm.bind(this);
+        this.SetJobrole = this.SetJobrole.bind(this);
+        this.SetCompany = this.SetCompany.bind(this);
+        this.SetStartDate = this.SetStartDate.bind(this);
+        this.SetEndDate = this.SetEndDate.bind(this);
+        this.SetSummary = this.SetSummary.bind(this);
 
         this.state = {
             showEditForm: false,
             renderSelf: true,
+            jobrole: "Some Sample Engineer",
+            company: "Sample Company inc.",
+            startDate: "2014",
+            endDate: "2018",
+            summary: "This is a sample work information. Take it with a grain of salt",
         };
     }
 
@@ -71,6 +81,46 @@ class WorkExperience extends Component {
         });
     }
 
+    SetJobrole(e) {
+        const val = e.target.value;
+
+        this.setState({
+            jobrole: val,
+        });
+    }
+
+    SetCompany(e) {
+        const val = e.target.value;
+
+        this.setState({
+            company: val,
+        });
+    }
+
+    SetStartDate(e) {
+        const val = e.target.value;
+
+        this.setState({
+            startDate: val,
+        });
+    }
+
+    SetEndDate(e) {
+        const val = e.target.value;
+
+        this.setState({
+            endDate: val,
+        });
+    }
+
+    SetSummary(e) {
+        const val = e.target.value;
+
+        this.setState({
+            summary: val,
+        });
+    }
+
     render() {
         return (
             <> {    this.state.renderSelf &&
@@ -80,13 +130,23 @@ class WorkExperience extends Component {
                             <div className="bullet-point"></div>
                         </div>
                         <div className="work-experience-fields">
-                            <div className="work-experience-job-role"> Some Sample Engineer </div>
-                            <div className="work-experience-company"> Sample Company inc. </div>
-                            <div className="work-experience-duration"> 2014-2018 </div>
-                            <div className="work-experience-summary"> This is a sample work experience </div>
+                            <div className="work-experience-job-role"> {this.state.jobrole} </div>
+                            <div className="work-experience-company"> {this.state.company} </div>
+                            <div className="work-experience-duration"> {this.state.startDate} - {this.state.endDate} </div>
+                            <div className="work-experience-summary"> {this.state.summary} </div>
                         </div>
 
-                        {this.state.showEditForm && <EditWorkExperienceForm DeleteSelf={this.DeleteSelf} />}
+                        {this.state.showEditForm && <EditWorkExperienceForm DeleteSelf={this.DeleteSelf}
+                                                                            jobrole={this.state.jobrole}
+                                                                            company={this.state.company}
+                                                                            startDate={this.state.startDate}
+                                                                            endDate={this.state.endDate}
+                                                                            summary={this.state.summary}
+                                                                            SetJobrole={this.SetJobrole}
+                                                                            SetCompany={this.SetCompany}
+                                                                            SetStartDate={this.SetStartDate}
+                                                                            SetEndDate={this.SetEndDate}
+                                                                            SetSummary={this.SetSummary} />}
                     </div>
                 }
             </>
