@@ -12,6 +12,7 @@ class Resume extends Component {
         super(props);
 
         this.AddEducation = this.AddEducation.bind(this);
+        this.AddWorkExperience = this.AddWorkExperience.bind(this);
 
         this.state = {
             currentUniqueKey: 3,
@@ -38,13 +39,13 @@ class Resume extends Component {
                                         summary='This is a sample education information. Take it with a grain of salt'/>,
                         ],
             works: [
-                <WorkExperience key="education-3"
+                <WorkExperience key="workExperience-3"
                                 jobrole='Sample Engineer 1'
                                 company='Some Company inc.'
                                 startDate='2014'
                                 endDate='2015'
                                 summary='This is a sample work information. Take it with a grain of salt' />,
-                <WorkExperience key="education-4"
+                <WorkExperience key="workExperience-4"
                                 jobrole='Sample Engineer 2'
                                 company='Some Company inc.'
                                 startDate='2014'
@@ -72,10 +73,28 @@ class Resume extends Component {
         });
     }
 
+    AddWorkExperience(jobrole, company, startDate, endDate, summary) {
+        const currentKey = this.state.currentUniqueKey
+        const key = `workExperience-${currentKey}`;
+        const work = <WorkExperience key={key} 
+                                    jobrole={jobrole}
+                                    company={company}
+                                    startDate={startDate}
+                                    endDate={endDate}
+                                    summary={summary} />
+
+        this.setState({
+            currentUniqueKey: (currentKey) => currentKey + 1,
+        });
+        this.setState({
+            works: [...this.state.works, work],
+        });
+    }
+
     render() {
         return (
             <div id='resume-container'>
-                <ExperienceForm AddEducation={this.AddEducation}/>
+                <ExperienceForm AddEducation={this.AddEducation} AddWorkExperience={this.AddWorkExperience}/>
                 <div id='resume'>
                     <IntroSection />
                     <div id='resume-info'>

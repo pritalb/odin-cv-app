@@ -115,7 +115,7 @@ class AddWorkExperienceForm extends Component {
 
         this.state = {
             jobrole: 'Sample Engineer',
-            company: 'Some Company',
+            company: 'Some Company inc.',
             startDate: '2014',
             endDate: '2015',
             summary: 'This is a sample work information. Take it with a grain of salt',
@@ -123,7 +123,13 @@ class AddWorkExperienceForm extends Component {
     }
 
     _AddWorkExperience() {
-
+        this.props.AddWorkExperience(
+            this.state.jobrole,
+            this.state.company,
+            this.state.startDate,
+            this.state.endDate,
+            this.state.summary
+        );
     }
 
     SetJobrole(e) {
@@ -207,7 +213,7 @@ class ExperienceForm extends Component {
         return (
             <div>
                 <AddEducationForm AddEducation={this.props.AddEducation}/>
-                <AddWorkExperienceForm />
+                <AddWorkExperienceForm AddWorkExperience={this.props.AddWorkExperience}/>
             </div>
         );
     }
