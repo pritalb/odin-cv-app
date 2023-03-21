@@ -43,6 +43,7 @@ class Education extends Component {
     constructor(props) {
         super(props);
 
+        this.DeleteSelf = this.DeleteSelf.bind(this);
         this.ShowForm = this.ShowForm.bind(this);
         this.HideForm = this.HideForm.bind(this);
         this.SetCourse = this.SetCourse.bind(this);
@@ -50,16 +51,15 @@ class Education extends Component {
         this.SetStartDate = this.SetStartDate.bind(this);
         this.SetEndDate = this.SetEndDate.bind(this);
         this.SetSummary = this.SetSummary.bind(this);
-        this.DeleteSelf = this.DeleteSelf.bind(this);
 
         this.state = {
             showEditForm: false,
+            renderSelf: true,
             course: this.props.course,
             institution: this.props.institution,
             startDate: this.props.startDate,
             endDate: this.props.endDate,
             summary: this.props.summary,
-            renderSelf: true,
         }
     }
 
