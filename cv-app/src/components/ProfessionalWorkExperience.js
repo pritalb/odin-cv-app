@@ -21,12 +21,12 @@ class EditWorkExperienceForm extends Component {
 
                 <div>
                     <label> Start Date: </label>
-                    <input type="date" value={this.props.startDate} onChange={(event) => this.props.SetStartDate(event)}/>
+                    <input type="month" value={this.props.startDate} onChange={(event) => this.props.SetStartDate(event)}/>
                 </div>
 
                 <div>
                     <label> End Date: </label>
-                    <input type="date" value={this.props.endDate} onChange={(event) => this.props.SetEndDate(event)}/>
+                    <input type="month" value={this.props.endDate} onChange={(event) => this.props.SetEndDate(event)}/>
                 </div>
                 <div>
                     <label> Summary: </label>
@@ -132,7 +132,7 @@ class WorkExperience extends Component {
                         <div className="work-experience-fields">
                             <div className="work-experience-job-role"> {this.state.jobrole} </div>
                             <div className="work-experience-company"> {this.state.company} </div>
-                            <div className="work-experience-duration"> {this.state.startDate} - {this.state.endDate} </div>
+                            <div className="work-experience-duration"> {this.state.startDate} to {this.state.endDate} </div>
                             <div className="work-experience-summary"> {this.state.summary} </div>
                         </div>
 

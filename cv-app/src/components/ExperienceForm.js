@@ -14,8 +14,8 @@ class AddEducationForm extends Component {
         this.state = {
             course: 'Degree Education',
             institution: 'Some College',
-            startDate: '2014',
-            endDate: '2015',
+            startDate: '2014-11',
+            endDate: '2015-11',
             summary: 'This is a sample education information. Take it with a grain of salt',
         }
     }
@@ -85,12 +85,12 @@ class AddEducationForm extends Component {
 
                 <div>
                     <label> Start Date: </label>
-                    <input type="date" value={this.state.startDate} onChange={(event) => this.SetStartDate(event)}/>
+                    <input type="month" value={this.state.startDate} onChange={(event) => this.SetStartDate(event)}/>
                 </div>
 
                 <div>
                     <label> End Date: </label>
-                    <input type="date" value={this.state.endDate} onChange={(event) => this.SetEndDate(event)}/>
+                    <input type="month" value={this.state.endDate} onChange={(event) => this.SetEndDate(event)}/>
                 </div>
                 <div>
                     <label> Course Summary: </label>
@@ -116,8 +116,8 @@ class AddWorkExperienceForm extends Component {
         this.state = {
             jobrole: 'Sample Engineer',
             company: 'Some Company inc.',
-            startDate: '2014',
-            endDate: '2015',
+            startDate: '2014-11',
+            endDate: '2015-12',
             summary: 'This is a sample work information. Take it with a grain of salt',
         };
     }
@@ -187,12 +187,12 @@ class AddWorkExperienceForm extends Component {
 
                 <div>
                     <label> Start Date: </label>
-                    <input type="date" value={this.state.startDate} onChange={(event) => this.SetStartDate(event)}/>
+                    <input type="month" value={this.state.startDate} onChange={(event) => this.SetStartDate(event)}/>
                 </div>
 
                 <div>
                     <label> End Date: </label>
-                    <input type="date" value={this.state.endDate} onChange={(event) => this.SetEndDate(event)}/>
+                    <input type="month" value={this.state.endDate} onChange={(event) => this.SetEndDate(event)}/>
                 </div>
                 <div>
                     <label> Summary: </label>

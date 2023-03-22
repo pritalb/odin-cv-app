@@ -21,12 +21,12 @@ class EditEducationForm extends Component {
 
                 <div>
                     <label> Start Date: </label>
-                    <input type="date" value={this.props.startDate} onChange={(event) => this.props.SetStartDate(event)}/>
+                    <input type="month" value={this.props.startDate} onChange={(event) => this.props.SetStartDate(event)}/>
                 </div>
 
                 <div>
                     <label> End Date: </label>
-                    <input type="date" value={this.props.endDate} onChange={(event) => this.props.SetEndDate(event)}/>
+                    <input type="month" value={this.props.endDate} onChange={(event) => this.props.SetEndDate(event)}/>
                 </div>
                 <div>
                     <label> Course Summary: </label>
@@ -133,7 +133,7 @@ class Education extends Component {
                         <div className='education-fields'>
                             <div className='education-name'> {this.state.course} </div>
                             <div className='education-institution'> {this.state.institution} </div>
-                            <div className='education-duration'> {this.state.startDate}-{this.state.endDate} </div>
+                            <div className='education-duration'> {this.state.startDate} to {this.state.endDate} </div>
                             <div className='education-summary'> {this.state.summary} </div>
                         </div>
                         {

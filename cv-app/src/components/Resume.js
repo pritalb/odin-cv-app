@@ -15,41 +15,41 @@ class Resume extends Component {
         this.AddWorkExperience = this.AddWorkExperience.bind(this);
 
         this.state = {
-            currentUniqueKey: 3,
+            currentUniqueKey: 5,
             educations: [
                             <Education  key="education-0"
                                         course='Degree Education 1'
                                         institution='Some College 1'
-                                        startDate='2011'
-                                        endDate='2014'
+                                        startDate='2011-11'
+                                        endDate='2014-11'
                                         summary='This is a sample education information. Take it with a grain of salt'/>,
 
                             <Education  key="education-1"
                                         course='Degree Education 2'
                                         institution='Some College 2'
-                                        startDate='2014'
-                                        endDate='2015'
+                                        startDate='2014-11'
+                                        endDate='2015-11'
                                         summary='This is a sample education information. Take it with a grain of salt' />,
 
                             <Education  key="education-2" 
                                         course='Degree Education 3'
                                         institution='Some College 3'
-                                        startDate='2015'
-                                        endDate='2017'
+                                        startDate='2015-11'
+                                        endDate='2017-11'
                                         summary='This is a sample education information. Take it with a grain of salt'/>,
                         ],
             works: [
                 <WorkExperience key="workExperience-3"
                                 jobrole='Sample Engineer 1'
                                 company='Some Company inc.'
-                                startDate='2014'
-                                endDate='2015'
+                                startDate='2014-12'
+                                endDate='2015-12'
                                 summary='This is a sample work information. Take it with a grain of salt' />,
                 <WorkExperience key="workExperience-4"
                                 jobrole='Sample Engineer 2'
                                 company='Some Company inc.'
-                                startDate='2014'
-                                endDate='2015'
+                                startDate='2014-12'
+                                endDate='2015-12'
                                 summary='This is a sample work information. Take it with a grain of salt' />,
             ],
         }
