@@ -35,3 +35,33 @@
     color: white;
     padding: 3px;
 }
+
+.form-container {
+    position: relative;
+}
+
+.edit-form {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    width: 250px;
+    height: 250px;
+    color: white;
+    background-color: burlywood;
+    padding: 8px;
+    gap: 3px;
+    border-radius: 10px;
+}
+
+.edit-form-element {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-form-button {
+    width: 60px;
+    height: 25px;
+    border-radius: 5px;
+    align-self: flex-end;
+}

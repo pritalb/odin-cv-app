@@ -8,32 +8,32 @@ class EditEducationForm extends Component {
 
     render() {
         return (
-            <div>
-                <div>
+            <div className='edit-form'>
+                <div className="edit-form-element">
                     <label> Course: </label>
                     <input value={this.props.course} onChange={(event) => this.props.SetCourse(event)}/>
                 </div>
 
-                <div>
+                <div className="edit-form-element">
                     <label> Institution: </label>
                     <input value={this.props.institution} onChange={(event) => this.props.SetInstitution(event)}/>
                 </div>
 
-                <div>
+                <div className="edit-form-element">
                     <label> Start Date: </label>
                     <input type="month" value={this.props.startDate} onChange={(event) => this.props.SetStartDate(event)}/>
                 </div>
 
-                <div>
+                <div className="edit-form-element">
                     <label> End Date: </label>
                     <input type="month" value={this.props.endDate} onChange={(event) => this.props.SetEndDate(event)}/>
                 </div>
-                <div>
+                <div className="edit-form-element">
                     <label> Course Summary: </label>
                     <textarea value={this.props.summary} onChange={(event) => this.props.SetSummary(event)}></textarea>
                 </div>
 
-                <button onClick={this.props.DeleteSelf}> Delete </button>
+                <button className="edit-form-button" onClick={this.props.DeleteSelf}> Delete </button>
             </div>
         );
     }
@@ -138,18 +138,20 @@ class Education extends Component {
                         </div>
                         {
                             this.state.showEditForm && 
-                            <EditEducationForm 
-                                course={this.state.summary}
-                                institution={this.state.institution}
-                                startDate={this.state.startDate}
-                                endDate={this.state.endDate}
-                                summary={this.state.summary}
-                                SetCourse={this.SetCourse}
-                                SetInstitution={this.SetInstitution}
-                                SetStartDate={this.SetStartDate}
-                                SetEndDate={this.SetEndDate}
-                                SetSummary={this.SetSummary}
-                                DeleteSelf={this.DeleteSelf} />
+                            <div className='form-container'>
+                                <EditEducationForm 
+                                    course={this.state.course}
+                                    institution={this.state.institution}
+                                    startDate={this.state.startDate}
+                                    endDate={this.state.endDate}
+                                    summary={this.state.summary}
+                                    SetCourse={this.SetCourse}
+                                    SetInstitution={this.SetInstitution}
+                                    SetStartDate={this.SetStartDate}
+                                    SetEndDate={this.SetEndDate}
+                                    SetSummary={this.SetSummary}
+                                    DeleteSelf={this.DeleteSelf} />
+                            </div>
                         }
                     </div>
                 }

@@ -8,32 +8,32 @@ class EditWorkExperienceForm extends Component {
 
     render() {
         return (
-            <div>
-                <div>
+            <div className="edit-form">
+                <div className="edit-form-element">
                     <label> Job Role: </label>
                     <input value={this.props.jobrole} onChange={(event) => this.props.SetJobrole(event)}/>
                 </div>
 
-                <div>
+                <div className="edit-form-element">
                     <label> Company: </label>
                     <input value={this.props.company} onChange={(event) => this.props.SetCompany(event)}/>
                 </div>
 
-                <div>
+                <div className="edit-form-element">
                     <label> Start Date: </label>
                     <input type="month" value={this.props.startDate} onChange={(event) => this.props.SetStartDate(event)}/>
                 </div>
 
-                <div>
+                <div className="edit-form-element">
                     <label> End Date: </label>
                     <input type="month" value={this.props.endDate} onChange={(event) => this.props.SetEndDate(event)}/>
                 </div>
-                <div>
+                <div className="edit-form-element">
                     <label> Summary: </label>
                     <textarea value={this.props.summary} onChange={(event) => this.props.SetSummary(event)}></textarea>
                 </div>
 
-                <button onClick={this.props.DeleteSelf}> Delete </button>
+                <button className="edit-form-button" onClick={this.props.DeleteSelf}> Delete </button>
             </div>
         );
     }
@@ -136,17 +136,22 @@ class WorkExperience extends Component {
                             <div className="work-experience-summary"> {this.state.summary} </div>
                         </div>
 
-                        {this.state.showEditForm && <EditWorkExperienceForm DeleteSelf={this.DeleteSelf}
-                                                                            jobrole={this.state.jobrole}
-                                                                            company={this.state.company}
-                                                                            startDate={this.state.startDate}
-                                                                            endDate={this.state.endDate}
-                                                                            summary={this.state.summary}
-                                                                            SetJobrole={this.SetJobrole}
-                                                                            SetCompany={this.SetCompany}
-                                                                            SetStartDate={this.SetStartDate}
-                                                                            SetEndDate={this.SetEndDate}
-                                                                            SetSummary={this.SetSummary} />}
+                        {
+                        this.state.showEditForm && 
+                            <div className='form-container'>
+                                <EditWorkExperienceForm DeleteSelf={this.DeleteSelf}
+                                                                                    jobrole={this.state.jobrole}
+                                                                                    company={this.state.company}
+                                                                                    startDate={this.state.startDate}
+                                                                                    endDate={this.state.endDate}
+                                                                                    summary={this.state.summary}
+                                                                                    SetJobrole={this.SetJobrole}
+                                                                                    SetCompany={this.SetCompany}
+                                                                                    SetStartDate={this.SetStartDate}
+                                                                                    SetEndDate={this.SetEndDate}
+                                                                                    SetSummary={this.SetSummary} />
+                            </div>
+                        }
                     </div>
                 }
             </>
