@@ -142,17 +142,18 @@ class IntroSection extends Component {
                 
                 {
                     this.state.shouldFormBeShown && 
-                    <IntroForm  name={this.state.name} 
-                                jobrole={this.state.jobrole}
-                                profilePictureURL={this.state.profilePictureURL}
-                                contactNumber={this.state.contactNumber}
-                                email={this.state.email} 
-                                SetName={this.SetName}
-                                SetJobRole={this.SetJobRole}
-                                SetProfilePictureURL={this.SetProfilePictureURL}
-                                SetContactNumber={this.SetContactNumber}
-                                SetEmail={this.SetEmail} />
-                                
+                    <div className='form-container'>
+                        <IntroForm  name={this.state.name} 
+                                    jobrole={this.state.jobrole}
+                                    profilePictureURL={this.state.profilePictureURL}
+                                    contactNumber={this.state.contactNumber}
+                                    email={this.state.email} 
+                                    SetName={this.SetName}
+                                    SetJobRole={this.SetJobRole}
+                                    SetProfilePictureURL={this.SetProfilePictureURL}
+                                    SetContactNumber={this.SetContactNumber}
+                                    SetEmail={this.SetEmail} />
+                    </div>       
                 }
             </div>
         );
