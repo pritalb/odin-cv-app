@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../styles/ProfileSummary.css';
 
 class SummaryForm extends Component {
     constructor(props) {
@@ -7,7 +8,7 @@ class SummaryForm extends Component {
 
     render() {
         return (
-            <div>
+            <div className='summary-edit-form-element'>
                 <label htmlFor='profile-summary'> Edit Profile Summary: </label>
                 <textarea name='profile-summary' value={this.props.summary} onChange={(e) => this.props.SetSummary(e)} ></textarea>
             </div>
