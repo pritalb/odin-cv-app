@@ -9,28 +9,28 @@ class IntroForm extends Component {
     render() {
         return (
 
-            <div>
-                <div>
+            <div className='intro-edit-form'>
+                <div className='intro-edit-form-element'>
                     <label htmlFor='name-info'> Enter your Name: </label>
                     <input name='name-info' value={this.props.name} onChange={(e) => {this.props.SetName(e)}} />
                 </div>
 
-                <div>
+                <div className='intro-edit-form-element'>
                     <label htmlFor='jobrole-info'> Enter your Job Role: </label>
                     <input name='jobrole-info' value={this.props.jobrole} onChange={(e) => {this.props.SetJobRole(e)}} />
                 </div>
 
-                <div>
+                <div className='intro-edit-form-element'>
                     <label htmlFor='jobrole-info'> Enter your Profile Picture URL: </label>
                     <input type="url" name='profile-picture-url' value={this.props.profilePictureURL} onChange={(e) => {this.props.SetProfilePictureURL(e)}} />
                 </div>
 
-                <div>
+                <div className='intro-edit-form-element'>
                     <label htmlFor='contact-number-info'> Enter your Contact Number: </label>
                     <input type="number" name='contact-number-info' value={this.props.contactNumber} onChange={(e) => {this.props.SetContactNumber(e)}} />
                 </div>
 
-                <div>
+                <div className='intro-edit-form-element'>
                     <label htmlFor='email-info'> Enter your Email: </label>
                     <input type="email" name='email-info' value={this.props.email} onChange={(e) => {this.props.SetEmail(e)}} />
                 </div>
