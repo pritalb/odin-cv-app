@@ -10,26 +10,26 @@ class EditWorkExperienceForm extends Component {
         return (
             <div className="edit-form">
                 <div className="edit-form-element">
-                    <label> Job Role: </label>
+                    <label className="edit-form-label"> Job Role: </label>
                     <input value={this.props.jobrole} onChange={(event) => this.props.SetJobrole(event)}/>
                 </div>
 
                 <div className="edit-form-element">
-                    <label> Company: </label>
+                    <label className="edit-form-label"> Company: </label>
                     <input value={this.props.company} onChange={(event) => this.props.SetCompany(event)}/>
                 </div>
 
                 <div className="edit-form-element">
-                    <label> Start Date: </label>
+                    <label className="edit-form-label"> Start Date: </label>
                     <input type="month" value={this.props.startDate} onChange={(event) => this.props.SetStartDate(event)}/>
                 </div>
 
                 <div className="edit-form-element">
-                    <label> End Date: </label>
+                    <label className="edit-form-label"> End Date: </label>
                     <input type="month" value={this.props.endDate} onChange={(event) => this.props.SetEndDate(event)}/>
                 </div>
                 <div className="edit-form-element">
-                    <label> Summary: </label>
+                    <label className="edit-form-label"> Summary: </label>
                     <textarea value={this.props.summary} onChange={(event) => this.props.SetSummary(event)}></textarea>
                 </div>
 

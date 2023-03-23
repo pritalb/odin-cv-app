@@ -10,26 +10,26 @@ class EditEducationForm extends Component {
         return (
             <div className='edit-form'>
                 <div className="edit-form-element">
-                    <label> Course: </label>
+                    <label className="edit-form-label"> Course: </label>
                     <input value={this.props.course} onChange={(event) => this.props.SetCourse(event)}/>
                 </div>
 
                 <div className="edit-form-element">
-                    <label> Institution: </label>
+                    <label className="edit-form-label"> Institution: </label>
                     <input value={this.props.institution} onChange={(event) => this.props.SetInstitution(event)}/>
                 </div>
 
                 <div className="edit-form-element">
-                    <label> Start Date: </label>
+                    <label className="edit-form-label"> Start Date: </label>
                     <input type="month" value={this.props.startDate} onChange={(event) => this.props.SetStartDate(event)}/>
                 </div>
 
                 <div className="edit-form-element">
-                    <label> End Date: </label>
+                    <label className="edit-form-label"> End Date: </label>
                     <input type="month" value={this.props.endDate} onChange={(event) => this.props.SetEndDate(event)}/>
                 </div>
                 <div className="edit-form-element">
-                    <label> Course Summary: </label>
+                    <label className="edit-form-label"> Course Summary: </label>
                     <textarea value={this.props.summary} onChange={(event) => this.props.SetSummary(event)}></textarea>
                 </div>
 
