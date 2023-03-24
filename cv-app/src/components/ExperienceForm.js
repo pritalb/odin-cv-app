@@ -220,6 +220,7 @@ class ExperienceForm extends Component {
                 <div className="heading"> CV Maker </div>
                 <div className="subheading"> Hover over the resume to edit content </div>
                 <ReactToPrint 
+                    pageStyle={'@page {size: A1}'}
                     trigger={() => <button> Print Your Resume </button>}
                     content={() => this.props.resumeRef.current} />
                 <div className="experience-forms-container">
