@@ -1,10 +1,8 @@
 #resume-container {
     display: flex;
     flex-direction: row;
-    padding-left: 60px;
-    padding-right: 60px;
-    padding-top: 20px;
-    justify-content: space-between;
+    width: 100vw;
+    height: 100%;
 }
 
 #resume {
@@ -87,4 +85,12 @@
     align-self: flex-end;
     background-color: transparent;
     border-style: solid;
+}
+
+.resume-flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 70%;
+    padding-top: 30px;
 }

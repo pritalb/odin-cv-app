@@ -95,12 +95,14 @@ class Resume extends Component {
         return (
             <div id='resume-container'>
                 <ExperienceForm AddEducation={this.AddEducation} AddWorkExperience={this.AddWorkExperience}/>
-                <div id='resume'>
-                    <IntroSection />
-                    <div id='resume-info'>
-                        <ProfileSection />
-                        <EducationSection educations={this.state.educations}/>
-                        <WorkExperienceSection works={this.state.works}/>
+                <div className='resume-flex-container'>
+                    <div id='resume'>
+                        <IntroSection />
+                        <div id='resume-info'>
+                            <ProfileSection />
+                            <EducationSection educations={this.state.educations}/>
+                            <WorkExperienceSection works={this.state.works}/>
+                        </div>
                     </div>
                 </div>
             </div>

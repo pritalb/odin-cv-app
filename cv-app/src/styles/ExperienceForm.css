@@ -66,4 +66,7 @@
 .sidebar {
     display: flex;
     flex-direction: column;
+    height: 100%;
+    padding-left: 80px;
+    padding-top: 30px;
 }
