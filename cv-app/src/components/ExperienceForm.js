@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import '../styles/ExperienceForm.css';
 
 class AddEducationForm extends Component {
     constructor(props) {
@@ -72,27 +73,28 @@ class AddEducationForm extends Component {
 
     render() {
         return (
-            <div>
-                <div>
+            <div className="experience-form">
+                <div className="experience-form-title"> Add Educational Experience </div>
+                <div className="experience-form-element">
                     <label> Course: </label>
                     <input value={this.state.course} onChange={(event) => this.SetCourse(event)}/>
                 </div>
 
-                <div>
+                <div className="experience-form-element">
                     <label> Institution: </label>
                     <input value={this.state.institution} onChange={(event) => this.SetInstitution(event)}/>
                 </div>
 
-                <div>
+                <div className="experience-form-element">
                     <label> Start Date: </label>
                     <input type="month" value={this.state.startDate} onChange={(event) => this.SetStartDate(event)}/>
                 </div>
 
-                <div>
+                <div className="experience-form-element">
                     <label> End Date: </label>
                     <input type="month" value={this.state.endDate} onChange={(event) => this.SetEndDate(event)}/>
                 </div>
-                <div>
+                <div className="experience-form-element">
                     <label> Course Summary: </label>
                     <textarea value={this.state.summary} onChange={(event) => this.SetSummary(event)}></textarea>
                 </div>
@@ -174,27 +176,28 @@ class AddWorkExperienceForm extends Component {
 
     render() {
         return (
-            <div>
-                <div>
+            <div className="experience-form">
+                <div className="experience-form-title"> Add Work Experience </div>
+                <div className="experience-form-element">
                     <label> Job Role: </label>
                     <input value={this.state.jobrole} onChange={(event) => this.SetJobrole(event)}/>
                 </div>
 
-                <div>
+                <div className="experience-form-element">
                     <label> Company: </label>
                     <input value={this.state.company} onChange={(event) => this.SetCompany(event)}/>
                 </div>
 
-                <div>
+                <div className="experience-form-element">
                     <label> Start Date: </label>
                     <input type="month" value={this.state.startDate} onChange={(event) => this.SetStartDate(event)}/>
                 </div>
 
-                <div>
+                <div className="experience-form-element">
                     <label> End Date: </label>
                     <input type="month" value={this.state.endDate} onChange={(event) => this.SetEndDate(event)}/>
                 </div>
-                <div>
+                <div className="experience-form-element">
                     <label> Summary: </label>
                     <textarea value={this.state.summary} onChange={(event) => this.SetSummary(event)}></textarea>
                 </div>
@@ -211,9 +214,13 @@ class ExperienceForm extends Component {
 
     render() {
         return (
-            <div>
-                <AddEducationForm AddEducation={this.props.AddEducation}/>
-                <AddWorkExperienceForm AddWorkExperience={this.props.AddWorkExperience}/>
+            <div className="sidebar">
+                <div className="heading"> CV Maker </div>
+                <div className="subheading"> Hover over the resume to edit content </div>
+                <div className="experience-forms-container">
+                    <AddEducationForm AddEducation={this.props.AddEducation}/>
+                    <AddWorkExperienceForm AddWorkExperience={this.props.AddWorkExperience}/>
+                </div>
             </div>
         );
     }
