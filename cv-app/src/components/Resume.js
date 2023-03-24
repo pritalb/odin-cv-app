@@ -10,6 +10,25 @@ import '../styles/Resume.css';
 class Resume extends Component {
     constructor(props) {
         super(props);
+    }
+    
+    render() {
+        return (
+            <div id='resume'>
+                <IntroSection />
+                <div id='resume-info'>
+                    <ProfileSection />
+                    <EducationSection educations={this.props.educations}/>
+                    <WorkExperienceSection works={this.props.works}/>
+                </div>
+            </div>
+        )
+    }
+}
+
+class ResumeContainer extends Component {
+    constructor(props) {
+        super(props);
 
         this.AddEducation = this.AddEducation.bind(this);
         this.AddWorkExperience = this.AddWorkExperience.bind(this);
@@ -53,6 +72,7 @@ class Resume extends Component {
                                 summary='This is a sample work information. Take it with a grain of salt' />,
             ],
         }
+        this.resumeRef = React.createRef();
     }
 
     AddEducation(course, institution, startDate, endDate, summary) {
@@ -94,20 +114,17 @@ class Resume extends Component {
     render() {
         return (
             <div id='resume-container'>
-                <ExperienceForm AddEducation={this.AddEducation} AddWorkExperience={this.AddWorkExperience}/>
+                <ExperienceForm AddEducation={this.AddEducation} 
+                                AddWorkExperience={this.AddWorkExperience} 
+                                resumeRef={this.resumeRef}/>
                 <div className='resume-flex-container'>
-                    <div id='resume'>
-                        <IntroSection />
-                        <div id='resume-info'>
-                            <ProfileSection />
-                            <EducationSection educations={this.state.educations}/>
-                            <WorkExperienceSection works={this.state.works}/>
-                        </div>
-                    </div>
+                    <Resume ref={this.resumeRef}
+                            educations={this.state.educations} 
+                            works={this.state.educations} />
                 </div>
             </div>
         );
     }
 }
 
-export default Resume;
+export default ResumeContainer;

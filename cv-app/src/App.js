@@ -1,11 +1,10 @@
 import './styles/App.css';
-import Resume from './components/Resume';
-import ExperienceForm from './components/ExperienceForm';
+import ResumeContainer from './components/Resume';
 
 function App() {
   return (
     <div className="app">
-        <Resume />
+        <ResumeContainer />
     </div>
   );
 }

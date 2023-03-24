@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import ReactToPrint from 'react-to-print';
+
 import '../styles/ExperienceForm.css';
 
 class AddEducationForm extends Component {
@@ -217,6 +219,9 @@ class ExperienceForm extends Component {
             <div className="sidebar">
                 <div className="heading"> CV Maker </div>
                 <div className="subheading"> Hover over the resume to edit content </div>
+                <ReactToPrint 
+                    trigger={() => <button> Print Your Resume </button>}
+                    content={() => this.props.resumeRef.current} />
                 <div className="experience-forms-container">
                     <AddEducationForm AddEducation={this.props.AddEducation}/>
                     <AddWorkExperienceForm AddWorkExperience={this.props.AddWorkExperience}/>
