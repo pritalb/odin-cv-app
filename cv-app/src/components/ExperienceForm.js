@@ -210,6 +210,19 @@ class AddWorkExperienceForm extends Component {
 }
 
 class ExperienceForm extends Component {
+    printButtonStyles = {
+        backgroundColor: 'transparent',
+        color: '#FF0000',
+        borderStyle: 'solid',
+        borderColor: '#FF0000',
+        fontWeight: 'bold',
+        width: '95%',
+        height: '40px',
+        padding: '5px',
+        marginTop: '10px',
+        borderRadius: '5px',
+    };
+
     constructor(props) {
         super(props);
     }
@@ -221,7 +234,7 @@ class ExperienceForm extends Component {
                 <div className="subheading"> Hover over the resume to edit content </div>
                 <ReactToPrint 
                     pageStyle={'@page {size: A1}'}
-                    trigger={() => <button> Print Your Resume </button>}
+                    trigger={() => <button style={this.printButtonStyles}> Click here to print your Resume </button>}
                     content={() => this.props.resumeRef.current} />
                 <div className="experience-forms-container">
                     <AddEducationForm AddEducation={this.props.AddEducation}/>
